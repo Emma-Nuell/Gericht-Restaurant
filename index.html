@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="./images/G.png" >
@@ -19,9 +20,22 @@
           <a href="#">Landing</a>
         </nav>
         <div class="frame">
-            <p>Log In / Registration</p>
+           <a href="#"><p>Log In / Registration</p></a>
             <img src="./images/Line-header.svg">
-            <p>Book Table</p>
+          <a href="#"><p>Book Table</p></a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <i class='bx bx-menu' id="menu"></i>
+            <i class='bx bx-x' id="times"></i>
+        </div>
+        <div class="nav-dropdown" id="nav-dropdown">
+            <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="#"><i class='bx bxs-layout' ></i>Pages</a>
+            <a href="#"><i class="fa-solid fa-address-book"></i>Contact Us</a>
+            <a href="#"><i class="fa-solid fa-feather"></i>Blog</a>
+            <a href="#"><i class="fa-solid fa-plane-arrival"></i>Landing</a>
+            <a href="#"><i class="fa-solid fa-user"></i>Log In / Registration</a>
+            <a href="#"><i class="fa-solid fa-chair"></i>Book Table</a>
         </div>
     </header>
     <section class="hero screen">
@@ -353,5 +367,25 @@
             <p class="copyright">2021 Gerícht. All Rights reserved.</p>
         </section>
     </footer>
+
+
+
+    <script>
+        const navToggle = document.getElementById("menu");
+        const navDropdown = document.getElementById("nav-dropdown")
+        const times = document.getElementById("times")
+    
+        // const navItems = document.querySelectorAll(".nav-dropdown li")
+      navToggle.addEventListener("click", () => {
+        navDropdown.style.display = "block"
+        times.style.display = "block"
+        navToggle.style.display = "none"
+      })
+        times.addEventListener("click", () => {
+            times.style.display = "none"
+            navToggle.style.display = "block"
+            navDropdown.style.display = "none"
+        })
+        </script>    
 </body>
 </html>
