@@ -287,7 +287,7 @@ a {
     align-items: center;
 }
 .about .knife {
-    height: 75%;
+    height: 60%;
     width: 20%;
     max-height: 85vh;
     max-width: 80vw;
@@ -580,10 +580,6 @@ caption {
     object-fit: contain;
     object-position: center;
 }
-.laurels .top {
-    left: 0%;
-    top: 0%;
-}
 .photo-gallery {
     width: 100%;
     align-items: center;
@@ -605,9 +601,6 @@ caption {
 } 
 .gallery-content {
    width: 35%;
-}
-.gallery-content h2 {
-    font-size: 60px;
 }
 .photo-gallery .images {
     display: flex;
@@ -707,17 +700,8 @@ caption {
     padding: 10px 5px 25px;
     left: 12.5%;
 }
-.subscribe h5 {
-    font-size: 20px;
-}
-.subscribe h2 {
-    font-size: 60px;
-}
-.subscribe p {
-    font-size: 14px;
-}
 form {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 80%;
@@ -734,16 +718,18 @@ form {
 }
 .subscribe input::placeholder {
     font-family: var(--comorant);
-    font-size: 16px;
+    font-size: clamp(8px, 1.1vw, 21px);
     font-weight: 600;
-    line-height: 28px;
+    line-height: 175%;
     letter-spacing: 0.64px;
     text-transform: capitalize;
     color: var(--ash-color);
     padding: 16px 20px;
 }
 .subscribe button {
-  scale: 0.8;
+  scale: 1;
+  height: 65%;
+  width: 25%;
 }
 .space-div {
     height: 12%;
@@ -769,27 +755,18 @@ form {
     text-align: center;
 }
 .contact h4 {
-    font-family: var(--comorant);
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 41.6px;
-    letter-spacing: 1.28px;
-    text-transform: capitalize;
     color: var(--white-color);
     margin-bottom: 24px;
 }
 .info span {
     font-family: var(--comorant);
-    font-size: 60px;
+    font-size: clamp(25px, 3.33vw, 70px);
     font-weight: 700;
-    line-height: 83.2px; /* 83.2px */
+    line-height: 130%;
     letter-spacing: 2.56px;
     text-transform: uppercase;
     color: var(--gold-color);
     margin-bottom: 32px;
-}
-.info p {
-    font-size: 14px;
 }
 .icons i {
     font-size: 26px;
@@ -797,30 +774,19 @@ form {
     margin-right: 16px;
 }
 .hours h4 {
-    font-family: var(--comorant);
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 41.6px;
-    letter-spacing: 1.28px;
-    text-transform: capitalize;
     color: var(--white-color);
     margin-bottom: 24px;
 }
 .hours p {
-    font-family: var(--open-sans);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.64px;
     color: var(--ash-color);
 }
 .copyright {
     position: absolute;
     bottom: 4%;
     font-family: var(--open-sans);
-    font-size: 14px;
+    font-size: clamp(8px, 1.1vw, 21px);
     font-weight: 400;
-    line-height: 28px; 
+    line-height: 175%; 
     letter-spacing: 0.64px;
     color: var(--ash-color);
 }
@@ -830,6 +796,9 @@ form {
 
 @media (max-width: 768px) {
     /* common styles */
+    body {
+        overflow-x: hidden;
+    }
     .screen {
         flex-direction: column;
         align-items: center;
@@ -863,6 +832,9 @@ form {
     }
     i {
         font-size: 22px;
+    }
+    .top, .scroll {
+      display: none;
     }
     .vector {
         height: 25px;
@@ -917,6 +889,7 @@ form {
         width: 30px;
     }
     .hero .scroll {
+      display: inline;
       width: 30px;
     }
     .slider {
@@ -967,6 +940,9 @@ form {
     .special-img {
         position: absolute;
         z-index: -1;
+        opacity: 0.3;
+        width: 100%;
+        object-fit: cover;
     }
     .special-content {
         flex-direction: column;
@@ -1020,10 +996,10 @@ form {
         transform: rotate(90deg);
         width: 100%;
         height: 100%;
-        /* overflow-x: hidden; */
     }
     .video-main {
-        object-fit: contain;
+        object-fit: fill;
+        object-position: center;
     }
     .play {
         width: 50px;
@@ -1039,6 +1015,7 @@ form {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        gap: 3%;
     }
     .laurel-content {
         height: 60%;
@@ -1077,6 +1054,118 @@ form {
         width: 80%;
         height: 35%;
     }
+    .photo-gallery {
+        justify-content: center;
+        background: url(./images/gallery-BG.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .photo-gallery .main {
+        height: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        background: none;
+    }
+    .gallery-content {
+        flex-direction: column;
+        height: 45%;
+        width: 80%;
+    }
+    .photo-gallery .images{
+        width: 90%;
+        height: 45%;
+        justify-content: center;
+    }
+    .image-box {
+        height: 100%;
+    }
+    .gallery-image {
+        height: 100%;
+    }
+    .find-us .main {
+         flex-direction: column;
+         width: 100%;
+         height: 90%;
+         justify-content: space-around;
+         gap: 3%;
+    }
+    .find-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 45%;
+        width: 80%;
+    }
+    .find-content h2 {
+        letter-spacing: 1.28px;
+        margin-bottom: 20px;
+    }
+   .find-content p:nth-of-type(1) {
+        margin-bottom: 16px;
+   }
+   .find-content p:nth-of-type(2) {
+    margin-bottom: 8px;
+   }
+   .find-us-image {
+    height: 45%;
+    width: 80%;
+   }
+   .subscribe {
+    padding: 5px 3px 10px;
+    text-align: center;
+   }
+   form {
+    gap: 16px;
+    height: 30px;
+   }
+   .subscribe input::placeholder {
+      padding: 8px 10px;
+      vertical-align: middle;
+   }
+   .subscribe button {
+    scale: 1;
+    height: 65%;
+    width: 25%;
+    text-align: center;
+    padding: 4px 10px;
+   }
+   .subscribe img {
+    width: 20px;
+   }
+   .footer-content {
+    flex-direction: column;
+    gap: 3%;
+   }
+   .contact, .info, .hours {
+    width: 80%;
+    height: 25%;
+    justify-content: center;
+   }
+   .contact h4 {
+    margin-bottom: 12px;
+   }
+   .info span {
+    margin-bottom: 15px;
+   }
+   .icons i {
+    font-size: 16px;
+    margin-right: 8px;
+   }
+   .hours h4 {
+    margin-bottom: 10px;
+   }
+   .copyright {
+    right: 1.5%;
+    bottom: 2.5%;
+   }
+   .footer .top {
+    display: inline;
+    width: 25px;
+   }
+
 }
 @media (max-width: 576px) {
    .hashtag {
