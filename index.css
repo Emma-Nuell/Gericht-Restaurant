@@ -13,7 +13,7 @@ body {
    width: 100%;
    min-height: 100vh;
 }
-/* common styles */
+/* common styles start */
 :root {
     --gold-color: #DCCA87;
     --ash-color: #AAAAAA;
@@ -36,7 +36,7 @@ article {
 button {
     cursor: pointer;
     font-family: var(--comorant);
-    font-size: 16px;
+    font-size: clamp(8px, 1.2vw, 21px);
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0.64px;
@@ -52,8 +52,68 @@ button:active {
     scale: 1.1;
 }
 i {
-    font-size: 50px;
+    font-size: 45px;
 }
+h5 {
+    font-family: var(--comorant);
+    font-size: clamp(11px, 1.4vw, 30px);
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.92px;
+    text-transform: capitalize;
+}
+h4 {
+    font-family: var(--comorant);
+    font-size: clamp(16px, 1.67vw, 40px);
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 1.28px;
+    text-transform: capitalize;
+    color: var(--gold-color);
+}
+p {
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: clamp(8px, 1.1vw, 21px);
+    line-height: 175%;
+    letter-spacing: 0.64px;
+    color: var(--ash-color);
+}
+h2 {
+    font-family: var(--comorant);
+    font-size: clamp(32px, 3.33vw, 70px);
+    font-weight: 600;
+    line-height: 130%; 
+    letter-spacing: 1.92px;
+    text-transform: capitalize;
+    color: var(--gold-color);
+}
+h1 {
+    font-family:var(--comorant);
+    font-size: clamp(40px, 4.69vw, 95px);
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 3.6px;
+    text-transform: capitalize;
+    color: var(--gold-color);
+}
+h3 {
+    font-family: var(--comorant);
+    font-size: clamp(22px, 2.34vw, 50px);
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 1.8px;
+    text-transform: capitalize;
+}
+.scroll {
+    bottom: 4%;
+    right: 4%;
+}
+.top {
+    top: 4%;
+    left: 4%;
+}
+   /* common styles end */
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -70,10 +130,11 @@ i {
 }
 .header-logo {
    align-items: center;
+   color: #fff;
 }
 .header-logo {
    letter-spacing: 1.76px;
-   font-size: 1.8em;
+   font-size: clamp(22px, 2.3vw, 50px);
    font-weight: 700;
    text-align: center; 
 }
@@ -87,8 +148,9 @@ i {
    text-decoration: none;
    color: #ffffff;
    letter-spacing: 0.64px;
-   font-size: 16px;
+   font-size: clamp(8px, 1.3vw, 25px);
    font-weight: 400;
+   margin-right: 10px;
 }
 .menu a::after{
     content: '';
@@ -116,7 +178,7 @@ i {
     height: 40px;
 }
 .frame p {
-    font-size: 14px;
+    font-size: clamp(8px, 1.3vw, 25px);
     letter-spacing: 0.8px;
     font-weight: 600;
 }
@@ -162,33 +224,11 @@ i {
     flex-direction: column;
     justify-content: flex-start;
 }
-.hero-content h5 {
-    font-size: 23px;
-    font-family: var(--comorant);
-    font-weight: 700;
-    letter-spacing: 0.92px;
-    color: #fff;
-}
  .vector {
     width: 35px;
     height: 40px;
 }
-.hero-content h1 {
-    font-family: var(--comorant);
-    font-size: 90px;
-    color: var(--gold-color);
-    letter-spacing: 3.6px;
-    line-height: 117px;
-    font-weight: 700;
-    text-transform: capitalize;
-}
 .hero-content p {
-    font-family: var(--open-sans);
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0.64px;
-    line-height: 28px;
-    color: var(--ash-color);
     margin-top: 32px;
 }
 .hashtag {
@@ -196,16 +236,6 @@ i {
 }
 .slider {
    bottom: 4%;
-}
-.scroll {
-    bottom: 5%;
-    right: 4%;
-    scale: 0.8;
-}
-.top {
-    top: 5%;
-    left: 5%;
-    scale: 0.8;
 }
 .about {
     width: 100%;
@@ -244,35 +274,17 @@ i {
     align-items: flex-end;
 }
 .about-content h2 {
-    color: var(--gold-color);
-    font-family: var(--comorant);
     font-size: 55px;
-    font-weight: 600;
-    line-height: 83.2px;
-    letter-spacing: 1.92px;
-    text-transform: capitalize;
 }
 .about-content img {
     width: 35px;
     height: 40px;
 }
 .about-content p {
-    font-family: var(--open-sans);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px; 
-    letter-spacing: 0.64px;
-    color: var(--ash-color);
     margin-top: 32px;
 }
 .about-content-right {
     width: 30%;
-}
-.about .scroll {
-    z-index: 3;
-}
-.about .top {
-    z-index: 4;
 }
 .screen1 {
     flex-direction: column;
@@ -292,6 +304,7 @@ i {
     letter-spacing: 0.92px;
     text-transform: capitalize;
     text-align: center;
+    color: #fff;
 }
 .heading img {
     width: 35px;
@@ -299,13 +312,7 @@ i {
 }
 .heading h2 {
     text-align: center;
-    font-family: var(--comorant);
-    font-size: 64px;
-    font-weight: 600;
-    line-height: 83.2px;
     letter-spacing: 2.56px;
-    text-transform: capitalize;
-    color: var(--gold-color);
 }
 .screen1  .special-img {
     height: 100%;
@@ -333,16 +340,11 @@ table td {
     border-collapse: collapse;
 }
 caption {
-    font-family: var(--comorant);
-    font-size: 35px;
-    font-weight: 600;
-    line-height: 58.5px;
-    letter-spacing: 1.8px;
-    text-transform: capitalize;
+    font-size: clamp(22px, 2.34vw, 50px);
 }
 .drinks-main {
     font-family: var(--comorant);
-    font-size: 23px;
+    font-size: clamp(11px, 1.3vw, 30px);
     font-weight: 700;
     line-height: 29.9px;
     letter-spacing: 0.92px;
@@ -351,7 +353,7 @@ caption {
 }
 .price {
     font-family: var(--comorant);
-    font-size: 23px;
+    font-size: clamp(11px, 1.3vw, 30px);
     font-weight: 700;
     line-height: 29.9px;
     letter-spacing: 0.92px;
@@ -363,7 +365,7 @@ caption {
 }
 .under {
     font-family: var(--open-sans);
-    font-size: 14px;
+    font-size: clamp(8px, 1.1vw, 21px);
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
@@ -405,41 +407,14 @@ caption {
 .chefs-word-content {
     width: 50%;
 }
-.chefs-word-content h5 {
-    font-family: var(--comorant);
-    font-size: 23px;
-    font-weight: 700;
-    line-height: 29.9px;
-    letter-spacing: 0.92px;
-    text-transform: capitalize;
-}
 .chefs-word-content h2 {
-    font-family: var(--comorant);
     font-size: 60px;
-    font-weight: 600;
-    line-height: 83.2px; 
-    letter-spacing: 1.92px;
-    text-transform: capitalize;
-    color: var(--gold-color);
     margin-bottom: 32px;
 }
 .chefs-word-content p {
-    font-family: var(--open-sans);
-    font-size: 16px;
     font-style: italic;
-    font-weight: 400;
-    line-height: 28px; 
-    letter-spacing: 0.64px;
-    color: var(--ash-color);
 }
 .chefs-word-content h4 {
-    font-family: var(--comorant);
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 41.6px;
-    letter-spacing: 1.28px;
-    text-transform: capitalize;
-    color: var(--gold-color);
     margin-top: 60px;
     margin-bottom: 8px;
 }
@@ -483,13 +458,11 @@ caption {
 }
 .video .top{
     top: 1%;
-    scale: 0.7;
     left: 3%;
     z-index: 1;
 }
 .video .scroll {
     bottom: 1%;
-    scale: 0.7;
     right: 3%;
     z-index: 1;
 }
@@ -507,9 +480,8 @@ caption {
 }
 .scissors {
   position: absolute;
-  top: 1%;
-  left: 1%;
-  /* scale: 0.5; */
+  top: 1.5%;
+  left: 1.5%;
   width: 90px;
   height: 90px;
 }
@@ -533,24 +505,6 @@ caption {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-.laurel-heading h5 {
-    font-family: var(--comorant);
-    font-size: 23px;
-    font-weight: 700;
-    line-height: 29.9px;
-    letter-spacing: 0.92px;
-    text-transform: capitalize;
-}
-.laurel-heading h2 {
-    font-family: var(--comorant);
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 83.2px;
-    letter-spacing: 1.92px;
-    text-transform: capitalize;
-    color: var(--gold-color);
 }
 .awards1 {
     display: flex;
@@ -576,22 +530,8 @@ caption {
     justify-content: flex-start;
 }
 .award-content h5 {
-    font-family: var(--comorant);
     font-size: 20px;
-    font-weight: 700;
-    line-height: 29.9px; 
-    letter-spacing: 0.92px;
-    text-transform: capitalize;
     color: var(--gold-color);
-}
-.award-content p {
-    font-family: var(--open-sans);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px; 
-    letter-spacing: 0.64px;
-    color: var(--ash-color);
 }
 .laurel-image {
     height: 100%;
@@ -627,31 +567,8 @@ caption {
 .gallery-content {
    width: 35%;
 }
-.gallery-content h5 {
-    font-family: var(--comorant);
-    font-size: 23px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 29.9px;
-    letter-spacing: 0.92px;
-    text-transform: capitalize;
-}
 .gallery-content h2 {
-    font-family: var(--comorant);
     font-size: 60px;
-    font-weight: 600;
-    line-height: 83.2px;
-    letter-spacing: 1.92px;
-    text-transform: capitalize;
-    color: var(--gold-color);
-}
-.gallery-content p {
-    font-family: var(--open-sans);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.64px;
-    color: var(--ash-color);
 }
 .photo-gallery .images {
     display: flex;
@@ -710,49 +627,18 @@ caption {
 .find-content {
     width: 50%;
 }
-.find-content h5:nth-of-type(1) {
-    font-family: var(--comorant);
-    font-size: 23px;
-    font-weight: 700;
-    line-height: 29.9px;
-    letter-spacing: 0.92px;
-    text-transform: capitalize;
-}
 .find-content h2 {
-    font-family: var(--comorant);
-    font-size: 64px;
-    font-weight: 600;
-    line-height: 83.2px;
     letter-spacing: 2.56px;
-    text-transform: capitalize;
-    color: var(--gold-color);
     margin-bottom: 60px;
 }
 .find-content p:nth-of-type(1) {
-    font-family: var(--open-sans);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.64px;
-    color: var(--ash-color);
     margin-bottom: 32px;
 }
 .find-content h5:nth-of-type(2) {
-    font-family: var(--comorant);
-    font-size: 23px;
-    font-weight: 700;
-    line-height: 29.9px;
-    letter-spacing: 0.92px;
-    text-transform: capitalize;
     color: var(--gold-color);
     margin-bottom: 16px;
 }
 .find-content p:nth-of-type(2), .find-content p:nth-of-type(3) {
-    font-family: var(--open-sans);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.64px;
     margin-bottom: 16px;
 }
 .find-us-image {
@@ -771,7 +657,7 @@ caption {
 .subscribe {
     position: absolute;
     width: 75%;
-    height: 35%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -779,34 +665,17 @@ caption {
     background:  #0C0C0C;
     box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.70);
     border-top: 0px;
-    padding: 7px 5px;
+    padding: 10px 5px 25px;
     left: 12.5%;
 }
 .subscribe h5 {
-    font-family: var(--comorant);
     font-size: 20px;
-    font-weight: 700;
-    line-height: 29.9px;
-    letter-spacing: 0.92px;
-    text-transform: capitalize;
 }
 .subscribe h2 {
-    font-family: var(--comorant);
     font-size: 60px;
-    font-weight: 600;
-    line-height: 83.2px;
-    letter-spacing: 1.92px;
-    text-transform: capitalize;
-    color: var(--gold-color);
-    /* margin-bottom: 9px; */
 }
 .subscribe p {
-    font-family: var(--open-sans);
     font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.64px;
-    /* margin-bottom: 7px; */
 }
 form {
     display: inline-flex;
@@ -870,14 +739,6 @@ form {
     color: var(--white-color);
     margin-bottom: 24px;
 }
-.contact p {
-    font-family: var(--open-sans);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.64px;
-    color: var(--ash-color);
-}
 .info span {
     font-family: var(--comorant);
     font-size: 60px;
@@ -889,11 +750,7 @@ form {
     margin-bottom: 32px;
 }
 .info p {
-    font-family: var(--open-sans);
     font-size: 14px;
-    font-weight: 400;
-    line-height: 28px; 
-    letter-spacing: 0.64px;
 }
 .icons i {
     font-size: 26px;
