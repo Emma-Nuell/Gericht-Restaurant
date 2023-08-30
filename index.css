@@ -997,6 +997,9 @@ form {
         margin-top: 22px;
         width: 150px;
     }
+    .video {
+        overflow-x: hidden;
+    }
     .box {
         transform: rotate(90deg);
         width: 100%;
