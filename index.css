@@ -964,6 +964,7 @@ form {
         height: 70%;
         gap: 5px;
         margin-bottom: 7px;
+        overflow-y: auto;
     }
     table {
         height: 49%;
